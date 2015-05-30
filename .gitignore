@@ -1,0 +1,6 @@
+
+public/scripts/.module-cache
+node_modules
+
+build
+public/npm-debug.log
