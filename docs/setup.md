@@ -109,6 +109,8 @@
 
 1. 執行網站
 
+        gulp dev
+
         gulp
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
@@ -208,6 +210,8 @@
 		npm install
 
 1. 執行網站
+
+        gulp dev
 
 		gulp
 
