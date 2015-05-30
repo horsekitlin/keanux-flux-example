@@ -6,7 +6,12 @@
 
 ---
 
-## Nginx 安裝說明
+
+## Mac安裝說明
+
+本說明為根據Os X 10.10.3完全乾淨的環境來設定Keanux的開發環境
+
+### Nginx 安裝說明
 
 1. 安裝Nginx 套件
 
@@ -21,10 +26,6 @@
 3. 啟動Nginx
 
         sudo nginx
-
-## Mac安裝說明
-
-本說明為根據Os X 10.10.3完全乾淨的環境來設定Keanux的開發環境
 
 ### 安裝Homebrew
 
@@ -68,7 +69,7 @@
 
 使用git clone到本機
 
-		git clone https://github.com/Keanux/keanux-personal ~/Documents/keanux-personal
+		git clone https://github.com/HorsekitLin/keanux-flux-example.git
 
 ### 安裝mysql
 
@@ -108,7 +109,7 @@
 
 1. 執行網站
 
-		node server.js
+        gulp
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
 
@@ -117,6 +118,22 @@
 ## Ubuntu安裝說明
 
 本說明為根據ubuntu 14.04完全乾淨的環境來設定Keanux的開發環境
+
+### Nginx 安裝說明
+
+1. 安裝Nginx 套件
+
+        sudo apt-get install nginx
+
+2. 設定Nginx , 檔案路徑為　/etc/nginx/sites-available/default
+
+        location /keanux/ {
+             proxy_pass http://localhost:8080/;
+        }
+
+3. 啟動Nginx
+
+        sudo /etc/init.d/nginx restart
 
 ### 安裝node.js (nvm)
 
@@ -155,7 +172,7 @@
 
 使用git clone到本機
 
-		git clone https://github.com/Keanux/keanux-personal ~/Documents/keanux-personal
+		git clone https://github.com/HorsekitLin/keanux-flux-example.git
 
 
 ### 安裝及設定mysql
@@ -192,6 +209,6 @@
 
 1. 執行網站
 
-		node server.js
+		gulp
 
 1. 打開browser到http://localhost:8080，看到網站就代表成功囉！
